@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сайт репетитора</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- Параллакс-заголовок -->
+  <div class="parallax-header">
+    <h1 class="parallax-title">Лучший в мире репетитор.</h1>
+  </div>
+
+  <div class="container">
+    <!-- Вкладки -->
+    <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">Инфо</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">Запись</button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3">
+      <!-- Первая вкладка -->
+      <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+        <h1>Чему я могу вас обучить?</h1>
+        <h2>Всем самым лучшим наукам.</h2>
+        <a href="https://школа-цпм.рф" target="_blank">Перейти на сайт самой лучшей школы России</a>
+        <img src="1673736608_1-zefirka-club-p-oboi-motivatsiya-na-uchebu-1.jpg" alt="Учеба" />
+
+        <p class="reveal">Геометрия - мой любимый и одновременно один из самых ненавистных школьниками предмет. Подтянем уровень до профи!</p>
+        <p class="reveal">Алгебра - более простой засчет структурности предмет, но она по своему сложна из-за строгости. Потренируемся на тренировачных заданиях!</p>
+        <p class="reveal">Комбинаторика - самый прикладной предмет из всех математических, от этого достигается ее большая важность. Изучим все ее аспекты!</p>
+        <p class="reveal">Теория чисел - трудный предмет из-за большого количества теории. Узнаем про все теоремы!</p>
+        <p class="reveal">Почему эти предметы важно знать?</p>
+
+        <ul class="mt-3">
+          <li>Сдать ОГЭ и ЕГЭ.</li>
+          <li>Выиграть олимпиады.</li>
+          <li>Стать умнее!</li>
+        </ul>
+      </div>
+
+      <!-- Вторая вкладка -->
+      <div class="tab-pane fade" id="tab2" role="tabpanel">
+        <h1>Запись на занятие</h1>
+        <p>Пожалуйста, заполните небольшую форму.</p>
+
+        <form class="mt-3">
+          <label class="form-label">Ваше имя</label>
+          <input type="text" class="form-control" placeholder="Введите имя" />
+
+          <label class="form-label">Класс</label>
+          <input type="number" class="form-control" placeholder="Введите класс обучения" />
+
+          <label class="form-label">Электронная почта</label>
+          <input type="email" class="form-control" placeholder="example@mail.ru" />
+
+          <label class="form-label">Предмет</label>
+          <select class="form-select">
+            <option>Геометрия</option>
+            <option>Алгебра</option>
+            <option>Комбинаторика</option>
+            <option>Теория чисел</option>
+          </select>
+
+          <label class="form-label">Плжелания к занятию</label>
+          <textarea class="form-control" rows="4" placeholder="Напишите что бы вы хотели от занятий..."></textarea>
+
+          <button type="button" class="btn btn-primary mt-3" id="showMessageBtn">Отправить</button>
+          <div class="hidden-text" id="submissionMessage">Анкета будет рассмотрена в ближайшие дни</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Футер -->
+  <footer>
+    &copy; 2025 Сайт лучшего репетитора. Все права защищены.
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Скролл-анимация для текста
+      const animatedElements = document.querySelectorAll('.reveal');
+      function revealOnScroll() {
+        const triggerPoint = window.innerHeight * 0.85;
+        animatedElements.forEach(el => {
+          const rect = el.getBoundingClientRect().top;
+          if (rect < triggerPoint) {
+            el.classList.add('visible');
+          }
+        });
+      }
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll();
+
+      // Кнопка на второй вкладке
+      const btn = document.getElementById('showMessageBtn');
+      const message = document.getElementById('submissionMessage');
+      if (btn && message) {
+        btn.addEventListener('click', () => {
+          message.style.display = 'block';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
