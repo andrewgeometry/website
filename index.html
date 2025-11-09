@@ -8,13 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-  <!-- Параллакс-заголовок -->
   <div class="parallax-header">
     <h1 class="parallax-title">Лучший в мире репетитор.</h1>
   </div>
 
   <div class="container">
-    <!-- Вкладки -->
     <ul class="nav nav-tabs custom-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">Инфо</button>
@@ -25,7 +23,6 @@
     </ul>
 
     <div class="tab-content mt-3">
-      <!-- Первая вкладка -->
       <div class="tab-pane fade show active" id="tab1" role="tabpanel">
         <h1>Чему я могу вас обучить?</h1>
         <h2>Всем самым лучшим наукам.</h2>
@@ -45,7 +42,6 @@
         </ul>
       </div>
 
-      <!-- Вторая вкладка -->
       <div class="tab-pane fade" id="tab2" role="tabpanel">
         <h1>Запись на занятие</h1>
         <p>Пожалуйста, заполните небольшую форму.</p>
@@ -78,16 +74,13 @@
     </div>
   </div>
 
-  <!-- Футер -->
   <footer>
     &copy; 2025 Сайт лучшего репетитора. Все права защищены.
   </footer>
 
-  <!-- Скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Скролл-анимация для текста
       const animatedElements = document.querySelectorAll('.reveal');
       function revealOnScroll() {
         const triggerPoint = window.innerHeight * 0.85;
@@ -101,7 +94,6 @@
       window.addEventListener('scroll', revealOnScroll);
       revealOnScroll();
 
-      // Кнопка на второй вкладке
       const btn = document.getElementById('showMessageBtn');
       const message = document.getElementById('submissionMessage');
       if (btn && message) {
