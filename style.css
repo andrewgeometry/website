@@ -1,4 +1,4 @@
-/* Общие стили */
+
 body {
   padding: 20px;
   background: #fbfbfd;
@@ -6,7 +6,6 @@ body {
   color: #1d1d1f;
 }
 
-/* Параллакс-заголовок */
 .parallax-header {
   height: 40vh;
   background: #000;
@@ -22,7 +21,6 @@ body {
   font-weight: 700;
 }
 
-/* Кастомные вкладки */
 .custom-tabs {
   border-bottom: none;
   display: flex;
@@ -32,7 +30,7 @@ body {
 
 .custom-tabs .nav-link {
   border: none;
-  background: #f5f5f5; /* неактивная вкладка */
+  background: #f5f5f5;
   color: #6e6e73;
   padding: 10px 25px;
   font-size: 18px;
@@ -41,15 +39,14 @@ body {
 }
 
 .custom-tabs .nav-link:hover {
-  background: #e0e0e0; /* эффект наведения */
+  background: #e0e0e0; 
 }
 
 .custom-tabs .nav-link.active {
-  background: #1d1d1f; /* чёрная активная */
+  background: #1d1d1f; 
   color: #fff !important;
 }
 
-/* Контент вкладок */
 .tab-content {
   background: #fff;
   padding: 40px;
@@ -59,7 +56,6 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Заголовки */
 h1 {
   font-size: 42px;
   font-weight: 600;
@@ -72,7 +68,6 @@ h2 {
   margin-top: 10px;
 }
 
-/* Ссылки */
 a {
   font-size: 18px;
   color: #0066cc;
@@ -82,7 +77,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Изображения */
 img {
   max-width: 100%;
   border-radius: 16px;
@@ -90,14 +84,12 @@ img {
   box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
-/* Параграфы */
 p {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 18px;
 }
 
-/* Кнопки */
 button.btn-primary {
   background: #1d1d1f;
   border: none;
@@ -111,7 +103,6 @@ button.btn-primary:hover {
   transform: scale(1.03);
 }
 
-/* Скрытый текст */
 .hidden-text {
   display: none;
   margin-top: 15px;
@@ -120,7 +111,6 @@ button.btn-primary:hover {
   border-radius: 10px;
 }
 
-/* Футер */
 footer {
   margin-top: 50px;
   text-align: center;
@@ -131,7 +121,6 @@ footer {
   font-size: 16px;
 }
 
-/* Анимации */
 .tab-pane {
   opacity: 0;
   transform: translateY(15px);
